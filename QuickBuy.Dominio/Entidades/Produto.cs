@@ -1,4 +1,6 @@
-﻿namespace QuickBuy.Dominio.Entidades
+﻿using System;
+
+namespace QuickBuy.Dominio.Entidades
 {
     public class Produto : Entidade
     {
@@ -8,11 +10,15 @@
 
         public string Descricao { get; set; }
 
-        public decimal preco { get; set; }
+        public decimal Preco { get; set; }
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (Id == 0)
+                AdicionarCritica("Identificação do Produto não informada.");
+
+            if (Preco == 0)
+                AdicionarCritica("Preço do Produto não informação");
         }
     }
 }

@@ -25,7 +25,7 @@ namespace QuickBuy.Dominio.Entidades
 
         public int NumeroEndereço { get; set; }
 
-        public int FormaPagamentoID { get; set; }
+        public int FormaPagamentoId { get; set; }
 
         public FormaPagamento FormaPagamento { get; set; }
 
